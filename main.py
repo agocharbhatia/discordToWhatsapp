@@ -133,7 +133,7 @@ async def webhook_post():
 
 
 def main():
-    app.run(debug=True, host="localhost", port=8001)
+    app.run(debug=True, host="localhost", port=8080)
 
 
 def client_main():
@@ -141,4 +141,4 @@ def client_main():
 
 
 threading.Thread(target=client_main).start()
-app.run(debug=False)
+app.run(debug=False, port=8080)
